@@ -38,6 +38,7 @@ public class FomularioAspi4 extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1029, 670));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
