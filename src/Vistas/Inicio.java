@@ -52,7 +52,7 @@ int xMouse, yMouse;
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGap(0, 130, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -60,7 +60,7 @@ int xMouse, yMouse;
         );
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(970, 30, 100, 140);
+        jPanel2.setBounds(970, 30, 130, 140);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -121,7 +121,7 @@ int xMouse, yMouse;
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(ExitBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1030, Short.MAX_VALUE))
+                .addGap(0, 1060, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,7 +131,7 @@ int xMouse, yMouse;
         );
 
         getContentPane().add(jPanel3);
-        jPanel3.setBounds(0, 0, 1070, 30);
+        jPanel3.setBounds(0, 0, 1100, 30);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 30)); // NOI18N
         jLabel2.setText("PROCESO DE PRE-REGISTRO A INGRESO 2021-2022");
@@ -150,9 +150,11 @@ int xMouse, yMouse;
         jLabel3.setBounds(250, 270, 610, 50);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setOpaque(false);
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnAdmin.setBackground(new java.awt.Color(255, 255, 255));
+        btnAdmin.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/admin64.png"))); // NOI18N
         btnAdmin.setText("Administrador");
         btnAdmin.setBorder(null);
@@ -162,6 +164,11 @@ int xMouse, yMouse;
         btnAdmin.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/admin64.png"))); // NOI18N
         btnAdmin.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/admin96.png"))); // NOI18N
         btnAdmin.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAdminMouseClicked(evt);
+            }
+        });
         btnAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdminActionPerformed(evt);
@@ -169,6 +176,7 @@ int xMouse, yMouse;
         });
         jPanel1.add(btnAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 14, 155, 170));
 
+        btnAspi.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         btnAspi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/aspi64.png"))); // NOI18N
         btnAspi.setText("Aspirante");
         btnAspi.setActionCommand("");
@@ -190,7 +198,7 @@ int xMouse, yMouse;
                 btnAspiActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAspi, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, 153, 171));
+        jPanel1.add(btnAspi, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 153, 171));
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(330, 360, 408, 184);
@@ -198,7 +206,7 @@ int xMouse, yMouse;
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FONDO4.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 170, 1069, 550);
+        jLabel1.setBounds(0, 170, 1100, 540);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LOGOS.png"))); // NOI18N
         getContentPane().add(jLabel6);
@@ -255,6 +263,12 @@ int xMouse, yMouse;
                    siguiente.setVisible(true);
                    this.dispose();
     }//GEN-LAST:event_btnAspiMouseClicked
+
+    private void btnAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdminMouseClicked
+         FomularioAdmin siguiente = new FomularioAdmin();
+                   siguiente.setVisible(true);
+                   this.dispose();
+    }//GEN-LAST:event_btnAdminMouseClicked
 
     /**
      * @param args the command line arguments
