@@ -36,6 +36,7 @@ int xMouse, yMouse;
         jPanel1 = new javax.swing.JPanel();
         btnAdmin = new javax.swing.JButton();
         btnAspi = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
@@ -198,15 +199,38 @@ int xMouse, yMouse;
                 btnAspiActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAspi, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 153, 171));
+        jPanel1.add(btnAspi, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 153, 180));
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/acerca64.png"))); // NOI18N
+        jButton1.setText("Acerca de nosotros");
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setFocusPainted(false);
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/acerca64.png"))); // NOI18N
+        jButton1.setRolloverSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/acerca96.png"))); // NOI18N
+        jButton1.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/acerca96.png"))); // NOI18N
+        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, 180, 180));
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(330, 360, 408, 184);
+        jPanel1.setBounds(168, 360, 750, 200);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FONDO4.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FONDO9.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 170, 1100, 540);
+        jLabel1.setBounds(0, 170, 1100, 550);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/LOGOS.png"))); // NOI18N
         getContentPane().add(jLabel6);
@@ -270,6 +294,16 @@ int xMouse, yMouse;
                    this.dispose();
     }//GEN-LAST:event_btnAdminMouseClicked
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+                AcercaDe siguiente = new AcercaDe();
+                   siguiente.setVisible(true);
+                   this.dispose();
+    }//GEN-LAST:event_jButton1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -310,6 +344,7 @@ int xMouse, yMouse;
     private javax.swing.JButton btnAdmin;
     private javax.swing.JButton btnAspi;
     private javax.swing.JLabel exitLa;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
